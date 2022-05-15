@@ -1,0 +1,214 @@
+/* MAIN */
+
+main{ /* ''enfant' de .body-container + 'parent' de <h1><h2> & de #main_skills + #main_softwares*/
+    width: 70%; /* appliquer comme largeur 70% de la largeur de <body> */
+    margin: 0 auto; /* espace entre la bordure de <main> et <header> */
+    text-align: center; /* aligne le texte horizontalement */
+    
+}
+
+/* 'enfants' de <main> + 'parents' de <h1> & #main_skills-cards & #main_softwares-cards */
+#main__skills, #main__softwares { 
+    width: 100%; /* appliquer comme largeur 100% de la largeur de <main> */
+    display: flex; /* spécifier le type de rendu des enfants */ 
+    flex-direction: column; /* ordonner les 'enfants' en colonne */
+    text-align: center; /* aligne le texte horizontalement */
+    justify-content: space-between; /*pour que les cartes soit autant éloignées que possible */    
+}
+
+h1 { /* 1er 'enfants' de #main_skills & #main_softwares */
+    width: 100%; /* appliquer comme largeur 100% de la largeur de #main_skills & #main_softwares */
+    padding: 0.8em 0 0.1em; /* appliquer un padding de 0.8em en haut & 0.1em en bas*/
+    font-size: var(--fontsize-bigtitle); /* aplliquer une taille de police */
+    color: var(--color-white); /* appliquer une couleur de police */
+    border-bottom: 2px solid var(--color-white); /* appliquer une bordure en bas */
+    letter-spacing: 0.2em; /* spécifier l'espacement entre les lettres */
+}
+
+/* 2èmes 'enfants' de #main_skills & #main_softwares + 'parent' de .skill & .software */
+#main__skills--cards, #main__softwares--cards { 
+    padding: 0.8em 0 0.1em; /* appliquer un padding de 0.8em en haut & 0.1em en bas*/
+    background-color: transparent; /* aplliquer une couleur d'arrière-plan */
+    display: flex; /* spécifier le type de rendu des enfants */
+    justify-content:space-between; /*pour que .skill & .software soit autant éloignées que possible */
+    flex-wrap: wrap;
+}
+
+/* 'enfants' de #main_skills-cards & #main_softwares-cards + 'parents' de card */
+.skill, .software {
+    background-color: transparent; /* aplliquer une couleur d'arrière-plan */
+    width: 275px; /* appliquer comme largeur 275px */
+    height: 400px; /* appliquer comme hauteur 400px */
+    box-sizing: border-box; /* le parent prend en compte l'inclusion de la bordure de l'enfant */
+    perspective: 1000px; /* définir que recto sera de prime abord devant verso */
+    display: flex; /* spécifier le type de rendu des enfants */ 
+    margin: 1em 0; /* espace entre la bordure de .skill & .software et #main_skills & #main_softwares */
+}
+
+.card { /* seul 'enfants' de .skill & .software + parent de .recto & .verso*/
+    box-sizing: border-box; /* le parent prend en compte l'inclusion de la bordure de l'enfant */
+    width: 100%; /* appliquer comme largeur 100% de la largeur de .skill & .software*/
+    height: 100%; /* appliquer comme hauteur 100% de la hauteur de .skill & .software*/
+    transition: transform 0.5s; /* définir la vitesse de retournement des cartes */
+    transform-style: preserve-3d; /* définir le style 3D pour le retournement des cartes */
+    display: flex; /* spécifier le type de rendu des enfants */ 
+}
+
+.skill.hovered .card { /* hovered = classe qui s'appplique sur card quand on survole la carte */
+    transform: rotateY(180deg); /*retourne la carte à 180 °  */
+    box-shadow:  0 0 50px var(--color-yellow); /* appliquer un rectro-éclairage sur la carte survolée */
+}
+
+.software.hovered .card { /* hovered = classe qui s'appplique sur card quand on survole la carte */
+    transform: rotateY(180deg); /*retourne la carte à 180 °  */
+    box-shadow:  0 0 50px var(--color-yellow); /* appliquer un rectro-éclairage sur la carte survolée */
+}
+
+
+.recto, .verso { /* 1er & 2ème 'enfants' de card */
+    color: var(--color-white); /* appliquer une couleur de police */
+    position: absolute; /* appliquer une position absolue par rapport au 'parent' .card */
+    width: 100%; /* appliquer comme largeur 100% de la largeur de .card*/
+    height: 100%; /* appliquer comme hauteur 100% de la hauteur de .card*/
+    backface-visibility: hidden; /* cacher le verso de la card */
+}
+
+
+.recto__container { /* seul 'enfant' de recto + 'parent' de .container-top et .container-bottom */
+    border-top: 6px solid var(--color-yellow); /* aplliquer une bordure en haut */
+    width: 100%; /* appliquer comme largeur 100% de la largeur de .recto */
+    height: 100%; /* appliquer comme hauteur 100% de la hauteur de .recto*/
+    display: flex;  /* spécifier le type de rendu des enfants */ 
+    flex-direction: column; /* ordonner les 'enfants' en colonne */
+    justify-content: center; /* aligner les 'enfants' horizontalement */
+    align-items: center; /* aligner les 'enfants' verticalement */
+    text-align: start; /* aligne le texte horizontalement = ici, au début */
+    box-sizing: border-box; /* le parent prend en compte l'inclusion de la bordure de l'enfant */
+}
+
+.recto__container--top{ /* 1er 'enfant de container et 'parent' de .picture & .picture-name*/
+    height: 45%; /* appliquer comme hauteur 45% de la hauteur de .recto*/
+    position: relative; /* appliquer une position relative pour placer les 'enfants' .picture & .picture-name */
+    display: flex; /* spécifier le type de rendu des enfants */ 
+    box-sizing: border-box; /* le parent prend en compte l'inclusion de la bordure de l'enfant */
+
+}
+
+.recto__container--top-picture{ /* 1er 'enfant' de .container-top => les images de chaque carte */
+    width: 100%; /* appliquer comme largeur 100% de la largeur de .picture */
+    display: block; /* spécifier le type de rendu des enfants */ 
+    box-sizing: border-box; /* le parent prend en compte l'inclusion de la bordure de l'enfant */
+}
+.recto__container--top-picture-name{ /* 2ème 'enfant' de .container-top => le titre de chaque carte */
+    position:absolute;  /* appliquer une position absolute par rapport au 'parent' .container-top */
+    bottom: 0%; /* le nom de l'image reste collé au bas de .picture */
+    padding: 0.3em 1em; /* appliquer un espace entre le texte et sa bordure */
+    margin: 3% 5%; /* espace entre la bordure de .picture-name et .container-top */
+    border: solid 1px var(--color-white); /* appliquer une bordure */
+    color: var(--color-white); /* appliquer une couleur de police */
+    font-size: var(--fontsize-title); /* aplliquer une taille de police */
+    overflow-wrap: break-word; /* définir le dépassement des mots de .picture-name */
+    word-break: break-all; /* appliquer la coupure du mot pour le dépassement de .picture-name */
+    letter-spacing: 0.2em; /* spécifier l'espacement entre les lettres */
+    background-color: rgba(0, 0, 0, 0.5); /* aplliquer une couleur d'arrière-plan */
+}
+
+.recto__container--bottom { /* 2ème 'enfant de .container et 'parent' de .description-title & description-text*/
+    width: 100%; /* appliquer comme largeur 100% de la largeur de .container */
+    height: 55%; /* appliquer comme hauteur 55% de la hauteur de .recto*/
+    position: relative; /* appliquer une position relative pour placer les 'enfants' */
+    display: flex; /* spécifier le type de rendu des enfants */ 
+    flex-direction: column; /* ordonner les 'enfants' en colonne */
+    padding: 0.3em; /* appliquer un espace entre le texte et sa bordure */
+    box-sizing: border-box; /* le parent prend en compte l'inclusion de la bordure de l'enfant */
+    background-color: var(--color-lightgrey); /* aplliquer une couleur d'arrière-plan */
+    overflow-y: hidden;  /* définir le dépassement de .container-bottom */
+}
+
+.recto__container--bottom-description-title { /* 1er 'enfant de .container-bottom */
+    align-self: flex-end; /* aligner les 'enfants' verticalement, ici en bas */
+    padding: 1.2em 0.5em; /* appliquer un espace entre le texte et sa bordure */
+    color: var(--color-yellow); /* appliquer une couleur de police */
+    font-weight: bold; /* aplliquer gras sur la police */
+    font-size: var(--fontsize-text); /* aplliquer une taille de police */
+    letter-spacing: 0.2em; /* spécifier l'espacement entre les lettres */
+    
+}
+.recto__container--bottom-descripition-li { /* 2eme 'enfant de .container-bottom */
+    align-self: flex-start; /* aligner les 'enfants' verticalement, ici au début */
+    color: black; /* appliquer une couleur de police */
+    font-size: var(--fontsize-text); /* aplliquer une taille de police */
+    font-weight: bold; /* aplliquer gras sur la police */
+    text-align: justify; /* aligne le texte horizontalement = ici, en justifié */
+    padding: 0.1em 2em; /* appliquer un espace entre le texte et sa bordure */
+    line-height: 1.3em; /* définit la hauteur de ligne */
+}
+
+
+.verso { /* 2ème 'enfant' de card + 'parent' de <h2> .score .methode .verso_footer & logo*/
+    transform: rotateY(180deg); /* au prime abord, le verso est caché (verso retourné à 180°) */ 
+    position: relative; /* appliquer une position relative pour placer les 'enfants' */
+    border-left: 3em solid; /* appliquer une bordure à gauche */
+    box-sizing: border-box; /* le parent prend en compte l'inclusion de la bordure de l'enfant */
+}
+
+.HTMLColor {color:#E04D27} /* appliquer une couleur au .verso */
+.CSSColor {color:#3E91E6} /* appliquer une couleur au .verso */
+.JSColor {color:#FFDE51} /* appliquer une couleur au .verso */
+.NODEColor {color:#87BF00} /* appliquer une couleur au .verso */
+.DATAColor {color:#3399DB} /* appliquer une couleur au .verso */
+.SequelizeColor {color:#3987C4} /* appliquer une couleur au .verso */
+.APIColor {color:#C13AFF} /* appliquer une couleur au .verso */
+.SPAColor {color:#E83404} /* appliquer une couleur au .verso */
+.DéploiementColor {color:#8ECB74} /* appliquer une couleur au .verso */
+.VScodeColor {color:#62C5FB} /* appliquer une couleur au .verso */
+.GitHubColor {color:#07d803} /* appliquer une couleur au .verso */
+.TerminalColor {color:#ff8080} /* appliquer une couleur au .verso */
+
+h2 { /* 1er 'enfant' de .verso */
+    margin: 0.5em 0.5em 0.3em 0; /* espace entre la bordure de <h2> et .verso */
+    font-size: var(--fontsize-bigtitle); /* aplliquer une taille de police */
+    font-weight: bold; /* aplliquer gras sur la police */
+    text-align: right; /* aligne le texte horizontalement = ici, à droite */
+}
+
+.verso__score{ /* 2ème 'enfant' de .verso */
+    margin: 0.2em 0.8em 1em 0; /* espace entre la bordure de .score et .verso */
+    text-align: right; /* aligne le texte horizontalement = ici, à droite */
+}
+
+.verso__methode{ /* 3ème 'enfant' de .verso + 'parent' de .methode-title et <li>*/
+    padding: 0.5em 0.5em 0 0.5em; /* appliquer un espace entre le texte et sa bordure */
+    font-weight: bold; /* aplliquer gras sur la police */
+    text-align: left; /* aligne le texte horizontalement = ici, à gauche */
+    border-left: 0.2em solid var(--color-yellow); /* appliquer une bordure à gauche */
+    margin: 0 1em 0.5em; /* espace entre la bordure de .methode et .verso */
+    text-shadow: 1px 1px 2px black, 0 0 1em var(--color-yellow), 0 0 0.2em var(--color-yellow); /* appliquer une ombre sur le texte */
+    color: white; /* appliquer une couleur de police */
+}
+
+.verso__methode--title{ /* 1er 'enfant' de .methode */
+    text-decoration: underline 0.2em; /* souligner .methode-title */ 
+    text-underline-offset: 0.2em; /* positionner le soulignement */ 
+    text-decoration-color: var(--color-yellow); /* appliquer une couleur au soulignement */ 
+    padding: 0.3em 0; /* appliquer un espace entre le texte et sa bordure */
+}
+
+.verso__methodes_li { /* 2ème 'enfant' de methode */
+    text-align: left; /* aligne le texte horizontalement = ici, à gauche */
+    line-height: 1.5em; /* définit la hauteur de ligne */
+}
+
+.verso__img{ /* 4ème 'enfant' de .verso */
+    position:absolute;  /* appliquer une position absolute par rapport au 'parent' .verso */
+    bottom: 0%; /* le pied-de-page du verso reste collé au bas de .verso */
+    right: 0%; /* le pied-de-page du verso reste collé à droite de .verso */
+    width: 50%; /* appliquer comme largeur 50% de la largeur de .verso */
+}
+
+.verso__logo{ /* 5ème 'enfant' de .verso */
+    position:absolute;  /* appliquer une position absolute par rapport au 'parent' .verso */
+    bottom: 0%; /* le logo du verso reste collé au bas de .verso */
+    right: 0%; /* le logo du verso reste collé à droite de .verso */
+    width: 18%;  /* appliquer comme largeur 18% de la largeur de .verso */
+}

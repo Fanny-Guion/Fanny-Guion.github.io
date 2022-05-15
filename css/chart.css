@@ -1,0 +1,33 @@
+/* HEAD */
+
+@font-face {font-family: "Baloo2"; /* déclarartion d'une font présente sur le PC */
+    src: url(../font/Baloo_2/Baloo2-VariableFont_wght.ttf)} /* chemin d'accès */
+html {font-family: "Baloo2"} /* police du texte du document entier html (déclarées lignes précédentes) */
+
+
+/* BODY */
+
+body{ /* définir la charte graphique */
+    --color-white: white; /* définir la couleur blanche */
+    --color-green: rgb(49, 123, 115) ; /* définir la couleur verte */
+    --color-lightgrey: rgb(231, 231, 231);  /* définir la couleur gris-clair */
+    --color-darkgrey: rgb(50, 50, 50);  /* définir la couleur gris-très-foncé */
+    --color-yellow: rgb(243, 207, 25);  /* définir la couleur jaune */
+    --color-darkyellow: rgb(221, 199, 2);  /* définir la couleur jaune foncé */
+    --fontsize-bigtitle: 2em; /* définir la taille de police pour les gros titres */
+    --fontsize-title: 1.3em; /* définir la taille de police pour les titres */
+    --fontsize-text: 0.8em; /* définir la taille de police pour les sous-titres */
+    --padding-or-border : 0.5em;/* décoller du bord (haut, droite, gauche, bas = 0.5 em) */
+    text-transform: uppercase; /* transformer le texte en majuscule */
+}
+
+.body__container { /* seul 'enfant de <body> et 'parent' de <header> <main> <footer> */
+    margin: auto; /* espace atomatique entre la bordure de .body-container et <body> */
+    background-image: url(../images/Bureau_1.jpg); /* définir l'image d'arrière-plan */
+    background-attachment: fixed; /* définir la position de l'image d'arrière-plan */
+    background-size:cover; /* définir la couvrance de l'image d'arrière-plan */
+    display: flex; /* spécifier le type de rendu des enfants */ 
+    flex-direction: column; /* ordonner les 'enfants' en colonne */
+    height: 100vh;  /* appliquer comme hauteur 100% de la hauteur du navigateur */
+    overflow-y: auto; /* définir le dépassement de .body-container */
+}

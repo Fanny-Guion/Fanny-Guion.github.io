@@ -1,0 +1,11 @@
+/*RESPONSIVE*/
+@media only screen and (max-width: 850px) {
+    #main__skills--cards, #main__softwares--cards {
+        justify-content: center;
+    }
+    .skill, .software{
+        width: 350px; /* appliquer comme largeur 350px */
+        height: 450px; /* appliquer comme hauteur 450px */
+    }
+    
+}

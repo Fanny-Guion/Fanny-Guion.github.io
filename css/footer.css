@@ -1,0 +1,22 @@
+/* FOOTER */
+
+footer{
+    position: sticky; /* le pied-de-page reste fixée quand on descend (scroll) avec la souris */
+    bottom: 0; /* le pied-de-page reste collée en bas du navigateur */
+    left: 0; /* le pied-de-page reste collée à gauche de .body-container */
+    z-index: 100; /* le pied-de-page est au 1er plan */
+}
+
+#footer__container { /* seul 'enfant' de <footer> + 'parent' de .footer_container-title & footer_container-year */
+    display: flex; /* spécifier le type de rendu des enfants */ 
+    justify-content: center; /* aligner les 'enfants' horizontalement */
+    align-items: center; /* aligner les 'enfants' verticalement */
+    font-size: var(--fontsize-title); /* aplliquer une taille de police à tous les 'enfants' */
+    background-color: rgba(0, 0, 0, 0.384); /* aplliquer une couleur d'arrière-plan */
+}
+
+.footer__container--title, .footer__container--year { /* 'enfants' de footer-container */
+    display: flex; /* spécifier le type de rendu des enfants */ 
+    color: var(--color-white); /* appliquer une couleur de police */
+    padding: 0.5em 0.1em; /* appliquer un espace entre le texte et sa bordure */
+}

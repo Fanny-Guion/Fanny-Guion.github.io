@@ -1,0 +1,76 @@
+/* HEADER */
+
+header {
+    position: sticky; /* l'en-tête reste fixée quand on descend (scroll) avec la souris */
+    top: 0; /* l'en-tête reste collée en haut de .body-container */
+    left: 0; /* l'en-tête reste collée à gauche de .body-container */
+    z-index: 100; /* l'en-tête est au 1er plan */
+}
+
+.header__container { /* seul 'enfant' de <header> + 'parent' de .header_left & .header_right */
+    display: flex; /* spécifier le type de rendu des enfants */ 
+    justify-content: space-between; /*pour que la partie gauche et droite soit autant éloignées que possible*/
+    align-items: center; /* aligner les 'enfants' verticalement */
+    padding: var(--padding-or-border); /* décoller les 'enfants' du bord (haut, droite, gauche, bas = 0.5 em) */
+    background-color: rgba(0, 0, 0, 0.384); /* aplliquer une couleur d'arrière-plan */
+}
+
+
+.header__left{ /* 1er 'enfant' de header-container + 'parent' de header_left-img & header-left_fullname */
+    display: flex; /* spécifier le type de rendu des enfants */ 
+    align-items: center; /* aligner les 'enfants' verticalement */
+    letter-spacing: 0.1em; /* spécifier l'espacement entre les lettres */
+}
+
+.header__left--img{/* 1er 'enfant' de header_left */
+    width: 3.5em; /* aplliquer une hauteur (la largeur s'applique automatiquement) */
+    border-radius: 2em; /* aplliquer un radius pour arrondir l'image */
+}
+
+.header__left--fullname{/* 2ème 'enfant' de header_left + 'parent' de  */
+    margin-left: var(--padding-or-border); /*éloigner le titre de l'image */
+    display: flex; /* spécifier le type de rendu des enfants */ 
+    flex-direction: column; /* ordonner les 'enfants' en colonne */
+    font-size: var(--fontsize-bigtitle); /* aplliquer une taille de police à tous les 'enfants' */
+}
+
+.header__left--fullname-firstname{ /* 1er 'enfant' de .header-left_fullname */
+    color: var(--color-white); /* appliquer une couleur de police */    
+}
+.header__left--fullname-lastname{ /* 2eme 'enfant' de .header-left_fullname */
+    color: var(--color-yellow); /* appliquer une couleur de police */
+    font-weight: bold; /* aplliquer gras sur la police */
+}
+
+
+
+.header__right{ /* 2ème 'enfant' de header-container + 'parent' de #marker .nav-link*/
+    font-weight: bold; /* aplliquer gras sur la police */
+    align-self: flex-end; /* aligner les 'enfants' verticalement, ici en bas */
+    display: flex; /* spécifier le type de rendu des enfants */ 
+    position: relative; /* appliquer une position relative pour placer les 'enfants' #marker & .nav-link */
+}
+
+#header__right--marker{ /* 1er 'enfant de .header_right */
+    position: absolute;  /* appliquer une position absolue par rapport au 'parent' .header_right */
+    width: 0; /* appliquer comme largeur 0 à la base */
+    height: 3px; /* appliquer comme hauteur 3px */
+    left: 0; /* le soulignement reste collée à gauche de .header_right */
+    bottom: 15px; /* le soulignement reste collé a 15px du bas de .header_right */
+    background-color: var(--color-yellow); /* aplliquer une couleur d'arrière-plan */
+    transition: 0.5s; /* définir la vitesse d'animation du soulignement */
+    border-radius: 4px; /* aplliquer un radius pour arrondir le soulignement */
+}
+
+.nav__link { /* 'enfants' de .header_right (3 = Home, Contact) */
+    box-sizing: border-box; /* le parent prend en compte l'inclusion de la bordure de l'enfant */
+    padding: var(--padding-or-border); /* décoller les 'enfants' du bord (haut, droite, gauche, bas = 0.5 em) */
+    margin: var(--padding-or-border); /* espace entre les 'enfants' (haut, droite, gauche, bas = 0.5 em) */
+    color: var(--color-white); /* aplliquer une couleur de police */
+    font-size: var(--fontsize-title); /* aplliquer une taille de police à tous les 'enfants' */
+    text-decoration: none; /* ne pas souligner les liens des enfants */ 
+}
+
+.nav__link:hover{
+    color: var(--color-yellow); /* appliquer une couleur de police */
+}

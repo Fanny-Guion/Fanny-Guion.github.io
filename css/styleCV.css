@@ -1,0 +1,16 @@
+/* MAIN CV.html */
+
+#CV{ /* seul 'enfant' de <main> */
+    width: 100%; /*appliquer comme largeur 100% de la largeur de <main> */
+    height: 1250px; /* appliquer comme hauteur 1200px */
+    margin: auto; /* espace atomatique entre la bordure de #CV et <main> */
+}
+
+/* FOOTER */
+footer{position: relative}  /* appliquer une position relative au <footer> (et non plus fixed) */
+
+
+/*RESPONSIVE*/
+/* @media only screen and (max-width: 900px) {
+
+} */
