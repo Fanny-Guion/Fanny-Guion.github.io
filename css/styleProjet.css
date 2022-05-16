@@ -1,5 +1,9 @@
 /* MAIN Projet.html (cf main.css) */
 
+main{
+    height: 100vh;  /* appliquer comme hauteur 100% de la hauteur du navigateur (por que le footer reste en bas*/
+}
+
 .project__card {/* seul 'enfant' de .project + 'parent' de .project__card--top & .project__card--bottom */
     width: 100%;
     height: 100%;

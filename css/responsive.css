@@ -1,9 +1,9 @@
 /*RESPONSIVE*/
-@media only screen and (max-width: 850px) {
-    #main__skills--cards, #main__softwares--cards, #main__projects--cards {
-        justify-content: center;
+@media only screen and (max-width: 850px) { /* pour les écrans de largeur 850px ou moins */
+    #main__skills--cards, #main__softwares--cards, #main__projects--cards {  
+        justify-content: center; /* centrer .skill, .software & .project  */
     }
-    .skill, .software{
+    .skill, .software, .project {
         width: 350px; /* appliquer comme largeur 350px */
         height: 450px; /* appliquer comme hauteur 450px */
     }
