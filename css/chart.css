@@ -20,7 +20,6 @@ body{ /* définir la charte graphique */
     --padding-or-border : 0.5em;/* décoller du bord (haut, droite, gauche, bas = 0.5 em) */
     text-transform: uppercase; /* transformer le texte en majuscule */
 }
-
 .body__container { /* seul 'enfant de <body> et 'parent' de <header> <main> <footer> */
     margin: auto; /* espace atomatique entre la bordure de .body-container et <body> */
     background-image: url(../images/Bureau_1.jpg); /* définir l'image d'arrière-plan */

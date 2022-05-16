@@ -20,7 +20,6 @@
     background-size: cover;
 
 }
-
 .project__card--top-picture-name{ /* 2eme 'enfant de .project__card--top */
     height: 10%;
     width: 100%;
@@ -31,7 +30,6 @@
     background-color: rgba(0, 0, 0, 0.3); /* aplliquer une couleur d'arrière-plan */
     box-sizing: border-box; /* le parent prend en compte l'inclusion de la bordure de l'enfant */
 }
-
 .project__card--top-picture{ /* 1er 'enfant de .project__card--top */
     height: 90%;
     box-sizing: border-box; /* le parent prend en compte l'inclusion de la bordure de l'enfant */
@@ -48,7 +46,6 @@
     box-sizing: border-box; /* le parent prend en compte l'inclusion de la bordure de l'enfant */
     background-color: var(--color-lightgrey); /* aplliquer une couleur d'arrière-plan */
     overflow-y: hidden;  /* définir le dépassement de .container-bottom */
-
 }
 .project__card--bottom-description-title{
     align-self: flex-end; /* aligner les 'enfants' verticalement, ici en bas */
@@ -68,5 +65,4 @@
     text-align: justify; /* aligne le texte horizontalement = ici, en justifié */
     padding: 0.1em 2em; /* appliquer un espace entre le texte et sa bordure */
     line-height: 1.3em; /* définit la hauteur de ligne */
-
 }

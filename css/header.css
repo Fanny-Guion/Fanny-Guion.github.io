@@ -6,7 +6,6 @@ header {
     left: 0; /* l'en-tête reste collée à gauche de .body-container */
     z-index: 100; /* l'en-tête est au 1er plan */
 }
-
 .header__container { /* seul 'enfant' de <header> + 'parent' de .header_left & .header_right */
     display: flex; /* spécifier le type de rendu des enfants */ 
     justify-content: space-between; /*pour que la partie gauche et droite soit autant éloignées que possible*/
@@ -21,19 +20,16 @@ header {
     align-items: center; /* aligner les 'enfants' verticalement */
     letter-spacing: 0.1em; /* spécifier l'espacement entre les lettres */
 }
-
 .header__left--img{/* 1er 'enfant' de header_left */
     width: 3.5em; /* aplliquer une hauteur (la largeur s'applique automatiquement) */
     border-radius: 2em; /* aplliquer un radius pour arrondir l'image */
 }
-
 .header__left--fullname{/* 2ème 'enfant' de header_left + 'parent' de  */
     margin-left: var(--padding-or-border); /*éloigner le titre de l'image */
     display: flex; /* spécifier le type de rendu des enfants */ 
     flex-direction: column; /* ordonner les 'enfants' en colonne */
     font-size: var(--fontsize-bigtitle); /* aplliquer une taille de police à tous les 'enfants' */
 }
-
 .header__left--fullname-firstname{ /* 1er 'enfant' de .header-left_fullname */
     color: var(--color-white); /* appliquer une couleur de police */    
 }
@@ -50,7 +46,6 @@ header {
     display: flex; /* spécifier le type de rendu des enfants */ 
     position: relative; /* appliquer une position relative pour placer les 'enfants' #marker & .nav-link */
 }
-
 #header__right--marker{ /* 1er 'enfant de .header_right */
     position: absolute;  /* appliquer une position absolue par rapport au 'parent' .header_right */
     width: 0; /* appliquer comme largeur 0 à la base */
@@ -61,7 +56,6 @@ header {
     transition: 0.5s; /* définir la vitesse d'animation du soulignement */
     border-radius: 4px; /* aplliquer un radius pour arrondir le soulignement */
 }
-
 .nav__link { /* 'enfants' de .header_right (3 = Home, Contact) */
     box-sizing: border-box; /* le parent prend en compte l'inclusion de la bordure de l'enfant */
     padding: var(--padding-or-border); /* décoller les 'enfants' du bord (haut, droite, gauche, bas = 0.5 em) */
@@ -70,7 +64,6 @@ header {
     font-size: var(--fontsize-title); /* aplliquer une taille de police à tous les 'enfants' */
     text-decoration: none; /* ne pas souligner les liens des enfants */ 
 }
-
 .nav__link:hover{
     color: var(--color-yellow); /* appliquer une couleur de police */
 }

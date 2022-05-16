@@ -55,12 +55,10 @@ h1 { /* 1er 'enfants' de #main_skills & #main_softwares & #main__projets */
     transform-style: preserve-3d; /* définir le style 3D pour le retournement des cartes */
     display: flex; /* spécifier le type de rendu des enfants */ 
 }
-
 .skill.hovered .card { /* hovered = classe qui s'appplique sur card quand on survole la carte */
     transform: rotateY(180deg); /*retourne la carte à 180 °  */
     box-shadow:  0 0 50px var(--color-yellow); /* appliquer un rectro-éclairage sur la carte survolée */
 }
-
 .software.hovered .card { /* hovered = classe qui s'appplique sur card quand on survole la carte */
     transform: rotateY(180deg); /*retourne la carte à 180 °  */
     box-shadow:  0 0 50px var(--color-yellow); /* appliquer un rectro-éclairage sur la carte survolée */
