@@ -7,8 +7,8 @@ main{ /* ''enfant' de .body-container + 'parent' de <h1><h2> & de #main_skills +
     
 }
 
-/* 'enfants' de <main> + 'parents' de <h1> & #main_skills-cards & #main_softwares-cards */
-#main__skills, #main__softwares { 
+/* 'enfants' de <main> + 'parents' de <h1> & #main_skills-cards & #main_softwares-cards & #main__projects--cards */
+#main__skills, #main__softwares, #main__projets { 
     width: 100%; /* appliquer comme largeur 100% de la largeur de <main> */
     display: flex; /* spécifier le type de rendu des enfants */ 
     flex-direction: column; /* ordonner les 'enfants' en colonne */
@@ -16,7 +16,7 @@ main{ /* ''enfant' de .body-container + 'parent' de <h1><h2> & de #main_skills +
     justify-content: space-between; /*pour que les cartes soit autant éloignées que possible */    
 }
 
-h1 { /* 1er 'enfants' de #main_skills & #main_softwares */
+h1 { /* 1er 'enfants' de #main_skills & #main_softwares & #main__projets */
     width: 100%; /* appliquer comme largeur 100% de la largeur de #main_skills & #main_softwares */
     padding: 0.8em 0 0.1em; /* appliquer un padding de 0.8em en haut & 0.1em en bas*/
     font-size: var(--fontsize-bigtitle); /* aplliquer une taille de police */
@@ -25,8 +25,9 @@ h1 { /* 1er 'enfants' de #main_skills & #main_softwares */
     letter-spacing: 0.2em; /* spécifier l'espacement entre les lettres */
 }
 
-/* 2èmes 'enfants' de #main_skills & #main_softwares + 'parent' de .skill & .software */
-#main__skills--cards, #main__softwares--cards { 
+/* 2èmes 'enfants' de #main_skills & #main_softwares & #main__projets
++ 'parent' de .skill & .software & .project */
+#main__skills--cards, #main__softwares--cards, #main__projects--cards { 
     padding: 0.8em 0 0.1em; /* appliquer un padding de 0.8em en haut & 0.1em en bas*/
     background-color: transparent; /* aplliquer une couleur d'arrière-plan */
     display: flex; /* spécifier le type de rendu des enfants */
@@ -34,8 +35,9 @@ h1 { /* 1er 'enfants' de #main_skills & #main_softwares */
     flex-wrap: wrap;
 }
 
-/* 'enfants' de #main_skills-cards & #main_softwares-cards + 'parents' de card */
-.skill, .software {
+/* 'enfants' de #main_skills-cards & #main_softwares-cards & #main__projects--cards
++ 'parents' de card (!!! project n'est pas parent de card, s'arrête ici voir styleProjet.css)*/
+.skill, .software, .project {
     background-color: transparent; /* aplliquer une couleur d'arrière-plan */
     width: 275px; /* appliquer comme largeur 275px */
     height: 400px; /* appliquer comme hauteur 400px */

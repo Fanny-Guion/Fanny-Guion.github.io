@@ -10,9 +10,7 @@
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/styleCV.css">
     <link rel="stylesheet" href="./css/responsive.css">
-
 </head>
 
     <body>
@@ -37,8 +35,16 @@
                 </div>
             </header>
 
+
             <main>
-                <iframe id = "CV" src="./images/CV GUION DEV.pdf" alt="CV"></iframe>
+                <div id = "main__skills">
+                    <h1>Compétences</h1>
+                    <article id = "main__skills--cards"></article>
+                </div>
+                <h1>Logiciels</h1>
+                <div id = "main__softwares">
+                    <article id = "main__softwares--cards"></article>
+                </div>
             </main>
                     
                     
@@ -50,9 +56,15 @@
 
         </div> <!-- fin de div body-container-->
             <script src="./js/date.js"> </script>
+
+            <script src="./data/skillsData.js"></script>
+            <script src="./js/skills.js"></script>
+
+            <script src="./data/softwaresData.js"></script>
+            <script src="./js/softwares.js"></script>
             
             <script src="./js/navGlide.js"></script>
             
     </body>
     
-    </html>
+</html>

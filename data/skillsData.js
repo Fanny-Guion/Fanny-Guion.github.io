@@ -48,7 +48,7 @@ const skills = [
     {
         name: "Sequelize",
         background: "Bureau_3_6_Sequelize.jpg",
-        description: [ "En avant pour sequelize (on jette tout et on recommence) !","Sequelize est un ORM qui m'a grandement facilité la vie, puisque il possède des requêtes intégrées : FindAll, findByPk,...","En parallèle l'apprentissage de try/catch m'a aussi permis de limiter les if en sapin 🎄"],
+        description: [ "En avant pour sequelize (on jette tout et on recommence) !","Sequelize est un ORM qui m'a grandement facilité la vie, puisque il possède des requêtes intégrées : FindAll, findByPk,...","En parallèle l'apprentissage de try/catch m'a aussi permis de limiter les if en sapin 🎄."],
         score: "⭐⭐⭐",
         methods: ["sequelize", "try/catch"],
         logo:"logo_SEQUELIZE.png"
@@ -57,7 +57,7 @@ const skills = [
     {
         name: "API",
         background: "Bureau_3_7_API.jpg",
-        description: ["AJAX : éviter de recharge les pages web requêtées !","REST m'a permis de découvrir les méthodes PUT, PATCH & DELETE (en plus de GET & POST)","L'API fetch (et son cors) m'ont fournit une interface de requêtes asynchrones (ne recharge pas la page) pour une BDD web"],
+        description: ["AJAX : éviter de recharge les pages web requêtées !","REST m'a permis de découvrir les méthodes PUT, PATCH & DELETE (en plus de GET & POST).","L'API fetch (& cors) m'ont fournit une interface de requêtes asynchrones (ne recharge pas la page) pour une BDD web."],
         score: "⭐⭐⭐⭐",
         methods: ["AJAX", "fetch", "API Rest", "(Insomnia, Rest client)"],
         logo:"logo_API.png"  
@@ -75,7 +75,7 @@ const skills = [
     {
         name: "Déploiement",
         background: "Bureau_3_9_Deploiement.jpg",
-        description: ["Déploiement : finalité du tout en un !","Le CMS est très pratique, car à partir d'une BDD il permet de gérer l’apparence et le contenu d’un site, et de 'réviser' tout le code (html, css, js...). Et pourquoi pas utiliser un NoSQL ? Mais cela est un autre débat 🤣."],
+        description: ["Déploiement : finalité du tout en un !","Le CMS est très pratique, car à partir d'une BDD il permet de gérer l’apparence et le contenu d’un site, et de 'réviser' tout le code (html, css, js...). Et pourquoi ne pas utiliser un NoSQL ? Mais cela est un autre débat 🤣."],
         score: "⭐⭐⭐",
         methods: ["CMS", "release", "NoSQL"],
         logo:"logo_NoSQL.png"

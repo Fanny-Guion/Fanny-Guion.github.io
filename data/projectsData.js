@@ -1,38 +1,21 @@
 const projects = [
-
+    
     {
-        name: "Hercule",
-        background: "",
-        description: "",
-        methodes: ["", "", "", "", ""],
+        name: "Dice_roller",
+        image: "Dice_roller.jpg",
+        description: ["manipuler un sprite", "récupérer les données d'un prompt"]
     },
 
     {
-        name: "Hercule_2",
-        background: "",
-        description: "",
-        methodes: ["", "", "", "", ""],
+        name: "Ofig_panier",
+        image: "Ofig_panier.jpg",
+        description: ["créer un formulaire ", "récupérer les données d'un formulaire"]
     },
 
     {
-        name: "Oblog",
-        background: "",
-        description: "",
-        methodes: ["", "", "", "", ""],
-    },
-
-    {
-        name: "DeckBuilder",
-        background: "",
-        description: "",
-        methodes: ["", "", "", "", ""],
-    },
-
-    {
-        name: "Sequelize",
-        background: "",
-        description: "",
-        methodes: ["", "", "", "", ""],
+        name: "Authentification",
+        image: "Authentification.jpg",
+        description: ["utiliser les sessions","récupérer les données de req.body"]
     },
 
 ]
