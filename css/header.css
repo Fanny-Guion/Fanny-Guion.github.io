@@ -15,6 +15,7 @@ header {
 }
 
 
+
 .header__left{ /* 1er 'enfant' de header-container + 'parent' de header_left-img & header-left_fullname */
     display: flex; /* spécifier le type de rendu des enfants */ 
     align-items: center; /* aligner les 'enfants' verticalement */

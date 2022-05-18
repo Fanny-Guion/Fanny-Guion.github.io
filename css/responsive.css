@@ -1,11 +1,16 @@
-/*RESPONSIVE*/
-@media only screen and (max-width: 850px) { /* pour les écrans de largeur 850px ou moins */
+/*RESPONSIVE pour les écrans de largeur 850px ou moins*/
+@media only screen and (max-width: 850px) {
+
+    /* centrer les 'enfants' de #main__skills--cards, #main__softwares--cards, #main__projects--cards
+        => 'enfants' = .skill, .software & .project  */
     #main__skills--cards, #main__softwares--cards, #main__projects--cards {  
-        justify-content: center; /* centrer .skill, .software & .project  */
+        justify-content: center; 
     }
+
+    /* modifier la largeur et la hauteur de .skill, .software & .project */
     .skill, .software, .project {
-        width: 350px; /* appliquer comme largeur 350px */
-        height: 450px; /* appliquer comme hauteur 450px */
+        width: 350px;
+        height: 450px;
     }
     
 }

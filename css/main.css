@@ -4,7 +4,7 @@ main{ /* ''enfant' de .body-container + 'parent' de <h1><h2> & de #main_skills +
     width: 70%; /* appliquer comme largeur 70% de la largeur de <body> */
     margin: 0 auto; /* espace entre la bordure de <main> et <header> */
     text-align: center; /* aligne le texte horizontalement */
-    
+
 }
 
 /* 'enfants' de <main> + 'parents' de <h1> & #main_skills-cards & #main_softwares-cards & #main__projects--cards */
@@ -16,7 +16,7 @@ main{ /* ''enfant' de .body-container + 'parent' de <h1><h2> & de #main_skills +
     justify-content: space-between; /*pour que les cartes soit autant éloignées que possible */    
 }
 
-h1 { /* 1er 'enfants' de #main_skills & #main_softwares & #main__projets */
+h1 { /* 1er 'enfants' de #main__profile & #main_skills & #main_softwares & #main__projets  */
     width: 100%; /* appliquer comme largeur 100% de la largeur de #main_skills & #main_softwares */
     padding: 0.8em 0 0.1em; /* appliquer un padding de 0.8em en haut & 0.1em en bas*/
     font-size: var(--fontsize-bigtitle); /* aplliquer une taille de police */
@@ -24,6 +24,21 @@ h1 { /* 1er 'enfants' de #main_skills & #main_softwares & #main__projets */
     border-bottom: 2px solid var(--color-white); /* appliquer une bordure en bas */
     letter-spacing: 0.2em; /* spécifier l'espacement entre les lettres */
 }
+
+#main__profile--text { /* 2eme 'enfant' enfant de #main__profile*/
+    background-color: rgba(0, 0, 0, 0.25); /* aplliquer une couleur d'arrière-plan */
+    color: var(--color-white); /* appliquer une couleur de police */
+    text-align: justify; /* aligne le texte horizontalement = ici, en justifié */
+    padding: 0.8em; /* appliquer un padding de 0.8em */
+    margin-top: 0.8em; /* appliquer une marge en haut de 0.8em */
+    font-size: var(--fontsize-title); /* aplliquer une taille de police */
+    line-height: 1.3em; /* définit la hauteur de ligne */
+    text-transform: none; /* remettre la case du texte en normal */
+}
+em{ /* sous-éléments de #main__profile--text */
+    color: var(--color-yellow)
+}
+
 
 /* 2èmes 'enfants' de #main_skills & #main_softwares & #main__projets
 + 'parent' de .skill & .software & .project */
@@ -42,37 +57,37 @@ h1 { /* 1er 'enfants' de #main_skills & #main_softwares & #main__projets */
     width: 275px; /* appliquer comme largeur 275px */
     height: 400px; /* appliquer comme hauteur 400px */
     box-sizing: border-box; /* le parent prend en compte l'inclusion de la bordure de l'enfant */
-    perspective: 1000px; /* définir que recto sera de prime abord devant verso */
+    /* perspective: 1000px; définir que recto sera de prime abord devant verso */
     display: flex; /* spécifier le type de rendu des enfants */ 
     margin: 1em 0; /* espace entre la bordure de .skill & .software et #main_skills & #main_softwares */
 }
 
 .card { /* seul 'enfants' de .skill & .software + parent de .recto & .verso*/
+    display: flex; /* spécifier le type de rendu des enfants */
     box-sizing: border-box; /* le parent prend en compte l'inclusion de la bordure de l'enfant */
     width: 100%; /* appliquer comme largeur 100% de la largeur de .skill & .software*/
     height: 100%; /* appliquer comme hauteur 100% de la hauteur de .skill & .software*/
     transition: transform 0.5s; /* définir la vitesse de retournement des cartes */
     transform-style: preserve-3d; /* définir le style 3D pour le retournement des cartes */
-    display: flex; /* spécifier le type de rendu des enfants */ 
 }
 .skill.hovered .card { /* hovered = classe qui s'appplique sur card quand on survole la carte */
     transform: rotateY(180deg); /*retourne la carte à 180 °  */
     box-shadow:  0 0 50px var(--color-yellow); /* appliquer un rectro-éclairage sur la carte survolée */
 }
 .software.hovered .card { /* hovered = classe qui s'appplique sur card quand on survole la carte */
-    transform: rotateY(180deg); /*retourne la carte à 180 °  */
+    transform: rotateY(180deg);/* retourne la carte à 180 ° */
     box-shadow:  0 0 50px var(--color-yellow); /* appliquer un rectro-éclairage sur la carte survolée */
 }
 
-
-.recto, .verso { /* 1er & 2ème 'enfants' de card */
+.recto { /* 1er 'enfant' de card + 'parent' de recto__container*/
     color: var(--color-white); /* appliquer une couleur de police */
     position: absolute; /* appliquer une position absolue par rapport au 'parent' .card */
     width: 100%; /* appliquer comme largeur 100% de la largeur de .card*/
     height: 100%; /* appliquer comme hauteur 100% de la hauteur de .card*/
-    backface-visibility: hidden; /* cacher le verso de la card */
+    backface-visibility: hidden; /* cacher le derrière de la card */
+    transform: rotateX(0deg); /* pour que eslint ne voit pas '-moz' comme une erreur*/
+    -moz-transform: rotateX(0deg); /* pour que Firefox n'affiche pas le resto quand il est sur verso */
 }
-
 
 .recto__container { /* seul 'enfant' de recto + 'parent' de .container-top et .container-bottom */
     border-top: 6px solid var(--color-yellow); /* aplliquer une bordure en haut */
@@ -146,10 +161,13 @@ h1 { /* 1er 'enfants' de #main_skills & #main_softwares & #main__projets */
 
 
 .verso { /* 2ème 'enfant' de card + 'parent' de <h2> .score .methode .verso_footer & logo*/
-    transform: rotateY(180deg); /* au prime abord, le verso est caché (verso retourné à 180°) */ 
-    position: relative; /* appliquer une position relative pour placer les 'enfants' */
+    backface-visibility: hidden; /*cacher le derrière de la card */
     border-left: 3em solid; /* appliquer une bordure à gauche */
     box-sizing: border-box; /* le parent prend en compte l'inclusion de la bordure de l'enfant */
+    color: var(--color-white); /* appliquer une couleur de police */
+    height: 100%; /* appliquer comme hauteur 100% de la hauteur de .card*/
+    transform: rotateY(180deg); /* au prime abord, le verso est caché (verso retourné à 180°) */ 
+    width: 100%; /* appliquer comme largeur 100% de la largeur de .card*/
 }
 
 .HTMLColor {color:#E04D27} /* appliquer une couleur au .verso */
@@ -161,8 +179,10 @@ h1 { /* 1er 'enfants' de #main_skills & #main_softwares & #main__projets */
 .APIColor {color:#C13AFF} /* appliquer une couleur au .verso */
 .SPAColor {color:#E83404} /* appliquer une couleur au .verso */
 .DéploiementColor {color:#8ECB74} /* appliquer une couleur au .verso */
-.VScodeColor {color:#62C5FB} /* appliquer une couleur au .verso */
 .GitHubColor {color:#07d803} /* appliquer une couleur au .verso */
+.VisualBasicColor{color:#c3c3c3}
+.ExcelColor{color:#5fd223}
+.VScodeColor {color:#62C5FB} /* appliquer une couleur au .verso */
 .TerminalColor {color:#ff8080} /* appliquer une couleur au .verso */
 
 h2 { /* 1er 'enfant' de .verso */

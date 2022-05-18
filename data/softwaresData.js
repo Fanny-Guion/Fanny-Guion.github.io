@@ -1,21 +1,13 @@
 const softwares = [
 
+
     {
         name: "VScode",
         background: "Bureau_3_VScode.jpg",
-        description: ["VScode : l'éditeur de code nécessaire à tout développeur !","En plus de posséder de très nombreuses extensions efficaces, il a surtout pour moi des fonctionnalités très utiles comme LiveShare, Database, REST client,...","Et il est connecté à GitHub 😍!"],
+        description: ["VScode : l'éditeur de code nécessaire à tout développeur !","En plus de posséder de très nombreuses extensions, il a surtout pour moi des fonctionnalités très utiles comme LiveShare, Database, REST-client,...","Et il est connecté à GitHub 😍!"],
         score: "⭐⭐⭐⭐",
         methods: ["MarkDown", "Live Share", "databade client", "Rest client", ".eslint", "beautify", "draw.io"],
         logo:"logo_VScode.png"
-    },
-
-    {
-        name: "GitHub",
-        background: "Bureau_3_GitHub.jpg",
-        description: ["GitHub : l'absolu collaboration et versionnage !","Ce qui m'a le plus plu, en plus des fonctionnalités évidentes liées à la gestion des repos, c'est qu'il y a aussi la possibilité de faire de la gestion de projets, à partir des 12 principes de la méthode Agile, grâce au kanban intégré.","",""],
-        score: "⭐⭐⭐",
-        methods: ["Agile", "gestion de projet", "repositories", "clone", "pull", "branch & checkout", "add-commit-push", "issue", "pull request"],
-        logo:"logo_GitHub.png"  
     },
 
     {
@@ -25,6 +17,15 @@ const softwares = [
         score: "⭐⭐⭐⭐",
         methods: ["powershell", "Git bash", "pwd", "cd", "dir", "mkdir", "code", "hostname", "tree" ],
         logo:"logo_GitBash.png" 
-    }
+    },
+    
+    {
+        name: "Excel",
+        background: "Bureau_3_Excel.jpg",
+        description: ["Excel : l'alliance parfaite des données et de l'organisation !","","Je l'ai découvert il y a plus de 30 ans, et j'en suis toujours la plus grande fan.","L'apprentissage de VBA m'a passionée, et m'a donnée encore plus l'envie de coder.",""],
+        score: "⭐⭐⭐",
+        methods: ["tableaux","tri et filtre", "recherche complexes", "TCD", "graphique dynamique", "gestionnaire de nom", "SQL", "VBA"],
+        logo:"logo_Excel.png"  
+    },
 
 ]

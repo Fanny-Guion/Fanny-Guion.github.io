@@ -57,7 +57,7 @@ const skills = [
     {
         name: "API",
         background: "Bureau_3_7_API.jpg",
-        description: ["AJAX : éviter de recharge les pages web requêtées !","REST m'a permis de découvrir les méthodes PUT, PATCH & DELETE (en plus de GET & POST).","L'API fetch (& cors) m'ont fournit une interface de requêtes asynchrones (ne recharge pas la page) pour une BDD web."],
+        description: ["AJAX : éviter de recharger les pages web !","REST m'a permis de découvrir les méthodes PUT, PATCH & DELETE (en plus de GET & POST).","L'API fetch (& cors) m'ont fournit une interface de requêtes pour les BDD web."],
         score: "⭐⭐⭐⭐",
         methods: ["AJAX", "fetch", "API Rest", "(Insomnia, Rest client)"],
         logo:"logo_API.png"  
@@ -79,5 +79,23 @@ const skills = [
         score: "⭐⭐⭐",
         methods: ["CMS", "release", "NoSQL"],
         logo:"logo_NoSQL.png"
+    },
+
+    {
+        name: "GitHub",
+        background: "Bureau_3_10_GitHub.jpg",
+        description: ["GitHub : l'absolu collaboration et versionnage !","Ce qui m'a le plus plu, en plus des fonctionnalités évidentes liées à la gestion des repos, c'est qu'il y a aussi la possibilité de faire de la gestion de projets, à partir des 12 principes de la méthode Agile, grâce au kanban intégré."],
+        score: "⭐⭐⭐",
+        methods: ["Agile", "gestion de projet", "repositories", "clone", "pull", "branch & checkout", "add-commit-push", "issue", "pull request"],
+        logo:"logo_GitHub.png"  
+    },
+    
+    {
+        name: "VisualBasic",
+        background: "Bureau_3_11_VisualBasic.jpg",
+        description: ["Visual Basic : Premiers pas vers le code !","Mon 1er métier, impliquait de nombreuses répétitions. Ce qui m'a naturellement amené à apprendre en autodidacte VBA, autant pour ses fonctions, que pour la création de logiciels de comptabilités."],
+        score: "⭐⭐⭐",
+        methods: ["sub", "fonction","msgbox", "if... else", "for (each)", "while", "VBProject", "VBComponents","Ucase","split", "DoEvents"],
+        logo:"logo_VisualBasic.png"  
     }
 ]
