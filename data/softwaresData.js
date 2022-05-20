@@ -4,7 +4,7 @@ const softwares = [
     {
         name: "VScode",
         background: "Bureau_3_VScode.jpg",
-        description: ["VScode : l'éditeur de code nécessaire à tout développeur !","En plus de posséder de très nombreuses extensions, il a surtout pour moi des fonctionnalités très utiles comme LiveShare, Database, REST-client,...","Et il est connecté à GitHub 😍!"],
+        description: ["VScode : l'éditeur de code nécessaire à tout développeur !","En plus de posséder de très nombreuses fonctionnalités, il a surtout pour moi des extensions très utiles comme LiveShare, Database, REST-client,...","Et il est connecté à GitHub 😍!"],
         score: "⭐⭐⭐⭐",
         methods: ["MarkDown", "Live Share", "databade client", "Rest client", ".eslint", "beautify", "draw.io"],
         logo:"logo_VScode.png"

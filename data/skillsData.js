@@ -57,7 +57,7 @@ const skills = [
     {
         name: "API",
         background: "Bureau_3_7_API.jpg",
-        description: ["AJAX : éviter de recharger les pages web !","REST m'a permis de découvrir les méthodes PUT, PATCH & DELETE (en plus de GET & POST).","L'API fetch (& cors) m'ont fournit une interface de requêtes pour les BDD web."],
+        description: ["AJAX : éviter de recharger les pages web !","REST m'a permis de découvrir les méthodes PUT, PATCH & DELETE (en plus de GET & POST).","L'API fetch (& cors) m'a fournit une interface de requêtes pour les BDD web."],
         score: "⭐⭐⭐⭐",
         methods: ["AJAX", "fetch", "API Rest", "(Insomnia, Rest client)"],
         logo:"logo_API.png"  

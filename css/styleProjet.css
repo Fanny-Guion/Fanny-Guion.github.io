@@ -37,7 +37,6 @@ main{
 .project__card--top-picture{ /* 1er 'enfant de .project__card--top */
     height: 90%; /* appliquer comme hauteur 90% de la hauteur de .project__card--top */
     box-sizing: border-box; /* le parent prend en compte l'inclusion de la bordure de l'enfant */
-
 }
 
 .project__card--bottom{ /* 2eme 'enfant de .project__card + 'parent' de description-title & description-text */

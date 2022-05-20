@@ -142,12 +142,14 @@ em{ /* sous-éléments de #main__profile--text */
 
 .recto__container--bottom-description-title { /* 1er 'enfant de .container-bottom */
     align-self: flex-end; /* aligner les 'enfants' verticalement, ici en bas */
-    padding: 1.2em 0.5em; /* appliquer un espace entre le texte et sa bordure */
+    margin: 1.2em 0.5em; /* espace entre la bordure de title et container--bottom*/
+    padding: 0.2em 0.3em 0.2em 0.5em; /*appliquer un espace entre le texte et sa bordure */
+    background-color:  var(--color-brown); /* aplliquer une couleur d'arrière-plan */
+    border-radius: 1em; /* aplliquer un radius pour arrondir l'arrière-plan du title */
     color: var(--color-yellow); /* appliquer une couleur de police */
     font-weight: bold; /* aplliquer gras sur la police */
     font-size: var(--fontsize-text); /* aplliquer une taille de police */
     letter-spacing: 0.2em; /* spécifier l'espacement entre les lettres */
-    
 }
 .recto__container--bottom-descripition-li { /* 2eme 'enfant de .container-bottom */
     align-self: flex-start; /* aligner les 'enfants' verticalement, ici au début */

@@ -16,7 +16,7 @@ function insertProjetsInDOM(projects) {
                     <div class="project__card" >
                         <div class="project__card--top">
                             <div class= "project__card--top-picture-name" >${projet.name}</div>
-                            <img class= "project__card--top-picture" src="./images/${projet.image}" alt="${projet.name}" />
+                            <img  draggable="false" class= "project__card--top-picture" src="./images/${projet.image}" alt="${projet.name}" />
                         </div>
                         <div class="project__card--bottom">
                             <p class ="project__card--bottom-description-title">DESCRIPTION</p>

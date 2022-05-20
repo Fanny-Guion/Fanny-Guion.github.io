@@ -9,11 +9,9 @@ html {font-family: "Baloo2"} /* police du texte du document entier html (déclar
 
 body{ /* définir la charte graphique */
     --color-white: white; /* définir la couleur blanche */
-    --color-green: rgb(49, 123, 115) ; /* définir la couleur verte */
     --color-lightgrey: rgb(231, 231, 231);  /* définir la couleur gris-clair */
-    --color-darkgrey: rgb(50, 50, 50);  /* définir la couleur gris-très-foncé */
     --color-yellow: rgb(243, 207, 25);  /* définir la couleur jaune */
-    --color-darkyellow: rgb(221, 199, 2);  /* définir la couleur jaune foncé */
+    --color-brown:rgba(84, 42, 0); /* définir la couleur marron */
     --fontsize-bigtitle: 2em; /* définir la taille de police pour les gros titres */
     --fontsize-title: 1.3em; /* définir la taille de police pour les titres */
     --fontsize-text: 0.8em; /* définir la taille de police pour les sous-titres */
