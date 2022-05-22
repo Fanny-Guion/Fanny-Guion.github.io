@@ -23,3 +23,14 @@
     }
     
 }
+
+
+/*RESPONSIVE pour les écrans de largeur 2200px ou plus*/
+@media only screen and (min-width: 2200px) {
+    footer{
+        position: absolute; /* le pied-de-page reste fixée (et non plus stiky)*/
+        width: 100%; /* appliquer comme largeur 100% de la largeur de .body__container */
+    }
+
+}
+    

@@ -7,4 +7,4 @@
 }
 
 /* FOOTER */
-footer{position: relative}  /* appliquer une position relative au <footer> (et non plus fixed) */
+footer{position: relative}  /* appliquer une position relative au <footer> (et non plus sticky) */

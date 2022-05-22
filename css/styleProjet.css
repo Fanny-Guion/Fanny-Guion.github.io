@@ -1,8 +1,5 @@
 /* MAIN Projet.html (cf main.css) */
 
-main{
-    height: 100vh;  /* appliquer comme hauteur 100% de la hauteur du navigateur (pour que le footer reste en bas*/
-}
 
 .project__card {/* seul 'enfant' de .project + 'parent' de .project__card--top & .project__card--bottom */
     width: 100%; /* appliquer comme largeur 100% de la largeur de .project */
@@ -68,4 +65,9 @@ main{
     text-align: justify; /* aligne le texte horizontalement = ici, en justifié */
     padding: 0.1em 2em; /* appliquer un espace entre le texte et sa bordure */
     line-height: 1.3em; /* définit la hauteur de ligne */
+}
+
+footer{
+    position: absolute; /* le pied-de-page reste fixée (et non plus stiky)*/
+    width: 100%; /* appliquer comme largeur 100% de la largeur de .body__container */
 }

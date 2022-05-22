@@ -14,7 +14,6 @@ footer{
     background-color: rgba(0, 0, 0, 0.384); /* aplliquer une couleur d'arrière-plan */
 }
 .footer__container--title, .footer__container--year { /* 'enfants' de footer-container */
-    display: flex; /* spécifier le type de rendu des enfants */ 
     color: var(--color-white); /* appliquer une couleur de police */
     padding: 0.5em 0.1em; /* appliquer un espace entre le texte et sa bordure */
 }
