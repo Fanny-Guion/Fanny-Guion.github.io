@@ -1,5 +1,14 @@
 /*RESPONSIVE pour les écrans de largeur 850px ou moins*/
 @media only screen and (max-width: 850px) {
+    
+
+    /* Centrer l'en-tête et mettre le menu dessous le nom */ 
+    .header__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
 
     /* centrer les 'enfants' de #main__skills--cards, #main__softwares--cards, #main__projects--cards
         => 'enfants' = .skill, .software & .project  */
